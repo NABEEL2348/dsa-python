@@ -1,0 +1,14 @@
+n=int(input("enter the number"))
+n2=n
+count=0
+n1=0
+while(n>0):
+    k=n%10
+    n=n//10
+    n1=(n1*10)+k
+    count=count+1
+    
+if(n2==n1):
+    print("palindrome")
+else:
+    print("not pslindrome")
