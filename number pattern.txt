@@ -33,3 +33,31 @@ while(i<=a):
         j=j+1
     print("")
     i=i+1
+
+
+
+
+
+
+
+n=int(input("enter the number"))
+i=0;
+j=1
+k=(n-1)*2
+
+while(i<n):
+    j=0
+    while(j<=k):
+        if(j<=i and j!=0):
+            print(j,end="")
+        elif(j!=0 and (((n-1)*2))-j<=i):
+            if(((((n-1)*2))-j)!=0):
+                print(((((n-1)*2))-j),end="")
+        else:
+            print(" ",end="")
+        j=j+1
+    print("")
+    i=i+1
+    
+
+

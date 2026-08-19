@@ -1,0 +1,23 @@
+n=int(input("enter the number"))
+i=0
+while(i<n):
+    j=0
+    while(j<n):
+        if(j<=i):
+            print(chr(65+j),end="")
+        j=j+1
+    print("")
+    i=i+1
+    
+
+n=int(input("enter the number"))
+i=0
+while(i<n):
+    j=0
+    while(j<n):
+        if(j<=i):
+            print(chr(65+i),end="")
+        j=j+1
+    print("")
+    i=i+1
+    
