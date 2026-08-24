@@ -1,0 +1,14 @@
+n=int(input("enter the number "))
+n1=n
+flag=1
+while(n>0):
+    if(n1%n==0):
+        if(n!=1 and n!=n1):
+            print("False")
+            flag=0
+            break
+    
+    n=n-1
+if(flag==1):
+    print("True")
+        

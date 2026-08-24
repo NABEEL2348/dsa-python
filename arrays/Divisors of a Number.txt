@@ -1,0 +1,11 @@
+class Solution:
+    def divisors(self, n):
+        n1=n
+        list1=[]
+        while(n>0):
+            if(n1%n==0):
+                list1.append(n)
+    
+            n=n-1
+        list1.reverse()
+        return list1
