@@ -1,0 +1,16 @@
+
+
+
+
+n=int(input("enter the number of times to recursive times"))
+
+
+
+def factorial1(n):
+    if(n==0):
+        
+        return 
+    print("nabeel")
+    return factorial1(n-1)
+        
+factorial1(n)

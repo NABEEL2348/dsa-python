@@ -1,0 +1,27 @@
+forward recursion:
+
+n=int(input("enter the number of times to recursive times:\n"))
+def adding(a):
+    if(a==n):
+        return n
+  
+    print(a)
+    return adding(a+1)
+
+n1=adding(1)
+print(n1)
+
+
+backward recursion:
+
+n=int(input("enter the number of times to recursive times"))
+
+
+
+def adding(n):
+    if(n==0):
+        return
+    print(n)
+    return adding(n-1)
+    
+adding(n)
