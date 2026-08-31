@@ -1,0 +1,12 @@
+n=int(input("enter the number of times to recursive times"))
+
+
+
+def adding(n):
+    if(n==1):
+        return 1
+    print(n)
+    return n+adding(n-1)
+    
+n1=adding(n)
+print(n1)
