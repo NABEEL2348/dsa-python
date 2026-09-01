@@ -1,0 +1,19 @@
+n=str(input("enter the number:"))
+
+n1=len(n)-1
+mid=(n1//2)
+print(mid)
+n2=0
+flag=True
+while(n1>=0):
+    if(n2>=mid):
+        break
+    if(n[n1]!=n[n2]):
+        flag=False
+    n2=n2+1
+    n1=n1-1
+    
+if(flag):
+    print("this is the palindrome")
+else:
+    print("this is not palindrome")
