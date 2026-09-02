@@ -1,0 +1,20 @@
+n=int(input("enter the size of the array"))
+arr=[]
+count={}
+for i in range(n):
+    arr.append(int(input("enter the number to store in array")))
+    
+max2=0 
+max3=0
+for i in range(n):
+    if arr[i] in count:
+        count[arr[i]]+=1
+        if(count[arr[i]]>max2):
+            max2=count[arr[i]]
+            max3=arr[i]
+    else:
+        count[arr[i]]=1
+        
+print(max3)
+
+    

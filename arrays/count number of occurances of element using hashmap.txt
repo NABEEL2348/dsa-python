@@ -1,0 +1,14 @@
+n=int(input("enter the size of the array"))
+arr=[]
+count={}
+for i in range(n):
+    print(i)
+    arr.append(int(input("enter the arrays")))
+
+for i in range(n):
+    if arr[i] in count:
+        count[arr[i]] += 1
+    else:
+        count[arr[i]]=1
+print(arr)
+print(count)
