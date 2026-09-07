@@ -29,3 +29,24 @@ while(i<n):
     i=i+1
     
 print(arr)
+
+
+
+
+
+n=int(input("enter the size of the elements"))
+arr=[]
+for i in range(n):
+    arr.append(int(input("enter the number to insert in an array")))
+print(arr)
+i=1
+
+while(i<n):
+    index=arr[i]
+    j=i-1
+    while(j>=0 and arr[j]>index):
+        arr[j+1]=arr[j]
+        j=j-1
+    arr[j+1]=index
+    i=i+1
+print(arr)
