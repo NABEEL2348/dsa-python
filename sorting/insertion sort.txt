@@ -1,0 +1,31 @@
+n=int(input("enter the size of the elements"))
+arr=[]
+for i in range(n):
+    arr.append(int(input("enter the number to insert in an array")))
+print(arr)
+i=1
+
+
+def swap(arr,count,i):
+    j=i-1
+    while(i>=0 and count>0):
+        swap=arr[i]
+        arr[i]=arr[j]
+        arr[j]=swap
+        i=i-1
+        j=j-1
+        count=count-1
+    return arr
+while(i<n):
+    j=i-1
+    count=0
+    while(j>=0):
+        if(arr[j]>=arr[i]):
+            count=count+1
+            j=j-1
+        else:
+            break
+    swap(arr,count,i)
+    i=i+1
+    
+print(arr)
