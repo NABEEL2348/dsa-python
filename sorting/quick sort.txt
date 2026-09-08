@@ -1,0 +1,43 @@
+n=int(input("Enter the size number of the array"))
+arr=[]
+for i in range(n):
+    arr.append(int(input("Enter the number for the array")))
+print(arr)
+
+i=1
+j=n-1
+
+
+
+def swap(arr,i,j):
+    swaps=arr[i]
+    arr[i]=arr[j]
+    arr[j]=swaps
+    
+    
+def quicksort(arr,a,b):
+    pivot=arr[a]
+  
+    i=a
+    j=b
+    if(a>=b):
+        return
+    while(i<=j):
+        while(arr[i]<pivot):
+            i=i+1
+        while(arr[j]>pivot):
+            j=j-1
+        if i<=j:
+            swap(arr,i,j)
+            i=i+1
+            j=j-1
+        
+    quicksort(arr,a,j)
+    quicksort(arr,i,b)
+            
+        
+        
+quicksort(arr,0,n-1)
+    
+print(arr)
+    
