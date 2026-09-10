@@ -1,0 +1,12 @@
+n=int(input("enter the size of the array"))
+arr=[]
+for i in range(n):
+    arr.append(int(input("enter the size of the array")))
+    
+count=arr[0]
+for i in range(n-1):
+    arr[i]=arr[i+1]
+
+arr[n-1]=count
+    
+print(arr)
