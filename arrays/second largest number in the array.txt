@@ -1,0 +1,26 @@
+n=int(input("enter the size of the array"))
+
+
+arr=[]
+
+for i in range(n):
+    arr.append(int(input("enter the number to append")))
+    
+print(arr)
+
+first=float('-inf')
+second=float('-inf')
+for i in range(n):
+    if(first ==0  and second ==0):
+        if(arr[i]>first):
+            first=arr[i]
+    else:
+        if(arr[i]>first):
+            swap=first
+            first=arr[i]
+            second=swap
+        elif(arr[i]>second and arr[i]!=first):
+            second=arr[i]
+    print(first,second)
+print(second)
+    

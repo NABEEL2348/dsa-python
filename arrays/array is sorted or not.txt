@@ -1,0 +1,17 @@
+n=int(input("enter the size of the array"))
+
+
+arr=[]
+
+for i in range(n):
+    arr.append(int(input("enter the number to append")))
+    
+flag=True
+for i in range(n-1):
+    if(arr[i]>arr[i+1]):
+        flag=False
+        break
+if(flag):
+    print("Sorted")
+else:
+    print("not Sorted")

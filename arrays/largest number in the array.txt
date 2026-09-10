@@ -1,0 +1,14 @@
+n=int(input("enter the size of the array"))
+
+
+arr=[]
+largest=0
+for i in range(n):
+    arr.append(int(input("enter the number to append")))
+    
+for i in range(n):
+    if(arr[i]>largest):
+        largest=arr[i]
+        
+print(largest)
+  
