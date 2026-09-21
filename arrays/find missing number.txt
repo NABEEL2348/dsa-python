@@ -1,0 +1,15 @@
+n=int(input("enter the size of the array"))
+arr=[]
+for i in range(n):
+    arr.append(int(input("enter the numbers to the array")))
+    
+print(arr)
+sum1=0
+
+for i in range(n):
+    sum1+=arr[i]
+    
+total=n*(n+1)/2
+missing=total-sum1
+
+print(missing)

@@ -1,0 +1,39 @@
+n=int(input("enter the size of the array"))
+arr=[]
+for i in range(n):
+    arr.append(int(input("Enter the number to fill in the array")))
+   
+   
+i=0;
+j=i+1
+def swap(arr,i,j):
+    swaps=arr[i]
+    arr[i]=arr[j]
+    arr[j]=swaps
+    
+    return arr
+    
+    
+    
+while(i<n):
+    if(arr[i]==0):
+        break
+    else:
+        i=i+1
+
+while(j<n):
+    if(arr[j]!=0):
+        break
+    else:
+        j=j+1
+        
+while(i<n and j<n):
+    if(arr[j]!=0):
+        swap(arr,i,j)
+        i=i+1
+        j=j+1
+    else:
+        j=j+1
+        
+print(arr)
+    
