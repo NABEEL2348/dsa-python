@@ -1,0 +1,22 @@
+n=int(input("enter the size of thr array"))
+
+arr=[]
+
+for i in range(n):
+    arr.append(int(input("enter the number to append")))
+    
+ele=0 
+arr1=[]
+for i in range(n-1,-1,-1):
+    if(i==n-1):
+        ele=arr[i]
+        arr1.append(arr[i])
+    elif(i!=n-1 and arr[i]>ele):
+        ele=arr[i]
+        arr1.append(arr[i])
+        
+        
+n1=len(arr1)  
+print(arr1)
+for j in range(n1-1,-1,-1):
+    print(arr1[j])
