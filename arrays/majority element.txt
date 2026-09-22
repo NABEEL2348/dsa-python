@@ -1,0 +1,25 @@
+
+arr=[7, 7,5,7,5,1,5,7,5,5,7,7,5,5,5,5]
+n=len(arr)
+count=0
+ele=0
+for i in range(n):
+    if(count==0):
+        ele=arr[i]
+        
+    if(arr[i]==ele):
+        count+=1
+    else:
+        count-=1
+count1=0
+for i in range(n):
+    if (arr[i]==ele):
+        count1=count1+1
+        
+if(count1>(n//2)):
+    print(ele)
+else:
+    print("no number")
+        
+    
+    
