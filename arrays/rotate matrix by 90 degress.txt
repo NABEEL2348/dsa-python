@@ -1,0 +1,20 @@
+n=int(input("enter the size of thr array"))
+
+result=[]
+for i in range(n):
+    row=[]
+    for j in range(n):
+        row.append(int(input("enter the number")))
+    result.append(row)   
+print(result)
+
+def swap(arr,i,j):
+    num=arr[i][j]
+    arr[i][j]=arr[j][i]
+    arr[j][i]=num
+for i in range(n):
+    for j in range(n):
+        if(j>i):
+            swap(result,i,j)
+            
+print(result)
