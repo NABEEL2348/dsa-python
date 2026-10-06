@@ -1,0 +1,76 @@
+basic:
+m=int(input("enter the row size of the array"))
+n=int(input("enter the column size of the array"))
+rows=[]
+for i in range(m):
+    cols=[]
+    for j in range(n):
+        cols.append(int(input("enter the number to insert")))
+        
+    rows.append(cols)
+print(rows)   
+rows1=set()
+cols1=set()
+for i in range(m):
+    for j in range(n):
+        if rows[i][j] == 0:
+            rows1.add(i)
+            cols1.add(j)
+
+
+print(rows1, cols1)
+
+for i in range(m):
+    for j in range(n):
+        if i in rows1 or j in cols1:
+            rows[i][j]=0
+            
+print(rows)
+            
+
+optimal:
+m=int(input("enter the row size of the array"))
+n=int(input("enter the column size of the array"))
+rows=[]
+
+
+for i in range(m):
+    cols=[]
+    for j in range(n):
+        cols.append(int(input("enter the number to insert")))
+        
+    rows.append(cols)
+print(rows) 
+first_row=False
+for j in range(n):
+    if rows[0][j]==0:
+        first_row=True
+        
+first_col=False
+
+for i in range(m):
+    if rows[i][0]==0:
+        first_col=True
+        
+for i in range(m):
+    for j in range(n):
+        if rows[i][j] == 0 and (i!=0 and j!=0):
+            rows[0][j]=0
+            rows[i][0]=0
+
+
+
+for i in range(1,m):
+    for j in range(1,n):
+        if rows[i][0]==0 or rows[0][j]==0:
+            rows[i][j]=0
+if first_row:
+    for j in range(n):
+        rows[0][j]=0
+        
+if first_col:
+    for i in range(m):
+        rows[i][0]=0
+            
+print(rows)
+            
