@@ -1,0 +1,17 @@
+n=int(input("enter the size of the array"))
+arr=[]
+for i in range(n):
+    arr.append(int(input("Enter the number to append")))
+target=int(input("enter the target number"))
+print(arr)
+hashmap={}
+
+    
+print(hashmap)
+
+for i in range(n):
+    complement = target-arr[i]
+    if complement in hashmap:
+        print("numbers",complement,arr[i])
+        
+    hashmap[arr[i]]=1
