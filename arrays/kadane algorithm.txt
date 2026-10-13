@@ -1,0 +1,22 @@
+n=int(input("Enter the size of the array"))
+arr=[]
+for i in range(n):
+    arr.append(int(input("enter the number to append")))
+    
+print(arr)
+maxi=-9999
+sum=0
+start=0
+startend=0
+for i in range(n):
+    sum+=arr[i]
+    if(sum==0):
+        start=i
+    if(maxi<sum):
+        maxi=sum
+        ansstart=start
+        startend=i
+    if(sum<0):
+        sum=0
+    
+print(maxi)    
