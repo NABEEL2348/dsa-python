@@ -1,0 +1,44 @@
+#include<stdio.h>
+int swap(int *A,int *b)
+{
+    int temp=*A;
+    *A=*b;
+    *b=temp;
+}
+int reverse(int *arr,int left,int right)
+{
+    while(left<=right)
+    {
+        int temp=arr[left];
+        arr[left]=arr[right];
+        arr[right]=temp;
+        left++;
+        right--;
+    }
+}
+int nextpermutation(int *arr,int n)
+{
+    int k=n-2;
+    while(k>=0 && arr[k]>=arr[k+1])
+    {
+        k--;
+    }
+    int l=n-1;
+    while(l>k && arr[l]<=arr[k])
+    {
+        l--;
+    }
+    swap(&arr[l],&arr[k]);
+    
+    reverse(arr,k+1,l);
+}
+int main()
+{
+    int arr[]={1,2,3};
+    int n=sizeof(arr)/sizeof(arr[0]);
+    nextpermutation(arr,n);
+    for(int i=0;i<n;i++)
+    {
+        printf("%d ",arr[i]);
+    }
+}
