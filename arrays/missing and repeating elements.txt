@@ -1,0 +1,22 @@
+n=int(input("enter the size of the array"))
+arr=[]
+s1=(n*(n+1))//2
+s2=(n*(n+1)*(2*n+1))//6
+print(s1,s2)
+for i in range(n):
+    arr.append(int(input("enter the number to append")))
+print(arr)
+s=0
+s3=0
+for i in range(n):
+    s+=arr[i]
+    s3+=arr[i]*arr[i]
+print(s,s3)
+val1=s1-s
+val2=s2-s3
+print(val1,val2)
+val3=val2//val1
+print(val3)
+x=(val3+val1)//2
+y=val2-x
+print("missing and repeating ",x,y)
