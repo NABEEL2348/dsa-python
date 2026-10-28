@@ -1,3 +1,4 @@
+import sys
 n=int(input("enter the size of the array"))
 arr=[]
 for i in range(n):
@@ -6,7 +7,7 @@ for i in range(n):
 print(arr)
 pref=1
 suff=1
-maxi=-999999
+maxi=-sys.maxsize -1
 for i in range(n):
     if pref==0:
         pref=1
