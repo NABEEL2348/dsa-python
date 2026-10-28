@@ -1,0 +1,59 @@
+n=int(input("enter the size of the first array"))
+
+arr=[]
+
+
+for i in range(n):
+    arr.append(int(input("enter the number to append")))
+m=int(input("enter the size of the second array"))
+
+
+arr1=[]
+
+
+for i in range(m):
+    arr1.append(int(input("enter the number to append")))
+    
+print(arr,arr1)
+
+def swap(arr,arr1,left,right):
+    temp=arr[left]
+    arr[left]=arr1[right]
+    arr1[right]=temp
+    
+    return arr , arr1
+    
+def swap1(arr,left,right):
+    temp=arr[left]
+    arr[left]=arr[right]
+    arr[right]=temp
+    
+    return arr
+    
+length=n+m
+
+gap=(length//2)+(length%2)
+
+while(gap>0):
+    left=0
+    right=left+gap
+    while(right<length):
+        if(left<n and right>=n):
+            swap(arr,arr1,left,right-n)
+        elif(left>=n and right>=n):
+            swap1(arr1,left-n,right-n)
+        else:
+            if(arr[left]>arr[right]):
+                swap1(arr,left,right)
+        left+=1
+        right+=1
+    if(gap==1):
+        break
+    gap=(gap//2)+(gap%2)
+    
+print(arr,arr1)
+    
+    
+    
+    
+    
