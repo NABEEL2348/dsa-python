@@ -1,0 +1,22 @@
+n=int(input("enter the size of the array"))
+str=[]
+
+for i in range(n):
+    str.append(input("enter the strings to append"))
+    
+print(str)
+
+count=0
+count1=0
+for i in range(n):
+    if str[i]=="0":
+        count+=1
+    elif str[i]=="1":
+        count1+=1
+    
+if(count <=1 or count1<=1):
+    print("True")
+else:
+    print("False")
+        
+    
