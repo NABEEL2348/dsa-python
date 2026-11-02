@@ -1,0 +1,23 @@
+s=input("enter the string to do the binary comaparsion operation")
+
+n=len(s)
+
+
+
+count=0
+count1=0
+for i in range(n):
+    if i%2 ==0:
+        print(i,s[i])
+        if s[i]!="0":
+            count+=1
+        else:
+            count1+=1
+    else:
+        print(i,s[i])
+        if s[i]!="1":
+            count+=1
+        else:
+            count1+=1
+print(count,count1)         
+print(min(count,count1))
